@@ -1,0 +1,268 @@
+{
+  "langs": [
+    "en-US",
+    "es-ES",
+    "zh-CN"
+  ],
+  "elements": {
+    "corespring-choice": "^1.7.0",
+    "corespring-number-line": "^0.2.0",
+    "corespring-placement-ordering": "^1.5.1",
+    "corespring-match": "PieElements/corespring-match#master"
+  },
+  "models": [
+    {
+      "id": "1",
+      "element": "corespring-choice",
+      "correctResponse": [
+        "sweden",
+        "finland"
+      ],
+      "feedback": {
+        "finland": "$FB_FINLAND",
+        "iceland": "$FB_ICELAND",
+        "norway": "$FB_NORWAY",
+        "sweden": "$FB_SWEDEN"
+      },
+      "translations": {
+        "default_locale": "en-US",
+        "en-US": {
+          "PROMPT": "Which of these northern European countries are EU members?",
+          "LABEL_FINLAND": "Finland",
+          "LABEL_ICELAND": "Iceland",
+          "LABEL_NORWAY": "Norway",
+          "LABEL_SWEDEN": "Sweden",
+          "FB_FINLAND": "Finland joined the EU in 1995",
+          "FB_ICELAND": "Iceland is not an EU member state",
+          "FB_NORWAY": "Norway is not an EU member, but they are a member for the Single Market",
+          "FB_SWEDEN": "Sweden joined the EU in 1995"
+        },
+        "es-ES": {
+          "PROMPT": "¿Cuál de estos países del norte de Europa son miembros de la UE?",
+          "LABEL_FINLAND": "Finlandia",
+          "LABEL_ICELAND": "Islandia",
+          "LABEL_NORWAY": "Noruega",
+          "LABEL_SWEDEN": "Suecia",
+          "FB_FINLAND": "Finlandia se unió a la UE en 1995",
+          "FB_ICELAND": "Islandia no es un estado miembro de la UE",
+          "FB_NORWAY": "Noruega no es miembro de la UE, sino que son un miembro de Mercado Único",
+          "FB_SWEDEN": "Suecia se unió a la UE en 1995"
+        },
+        "zh-CN": {
+          "PROMPT": "这些北欧国家中哪个是欧盟成员？",
+          "LABEL_FINLAND": "芬兰",
+          "LABEL_ICELAND": "冰岛",
+          "LABEL_NORWAY": "挪威",
+          "LABEL_SWEDEN": "瑞典",
+          "FB_FINLAND": "芬兰于1995年加入欧盟",
+          "FB_ICELAND": "冰岛不是欧盟成员国",
+          "FB_NORWAY": "挪威不是欧盟成员国，但他们是单一市场的成员",
+          "FB_SWEDEN": "瑞典于1995年加入欧盟"
+        }
+      },
+      "model": {
+        "prompt": "$PROMPT",
+        "choiceMode": "checkbox",
+        "keyMode": "numbers",
+        "disabled": false,
+        "choices": [
+          {
+            "label": "$LABEL_SWEDEN",
+            "value": "sweden"
+          },
+          {
+            "label": "$LABEL_ICELAND",
+            "value": "iceland"
+          },
+          {
+            "label": "$LABEL_NORWAY",
+            "value": "norway"
+          },
+          {
+            "label": "$LABEL_FINLAND",
+            "value": "finland"
+          }
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "element": "corespring-match",
+      "correctResponse": [
+        {
+          "id": "row-1",
+          "matchSet": [
+            false,
+            true
+          ]
+        },
+        {
+          "id": "row-2",
+          "matchSet": [
+            true,
+            false
+          ]
+        },
+        {
+          "id": "row-3",
+          "matchSet": [
+            true,
+            false
+          ]
+        },
+        {
+          "id": "row-4",
+          "matchSet": [
+            true,
+            false
+          ]
+        }
+      ],
+      "columns": [
+        {
+          "labelHtml": "Custom header"
+        },
+        {
+          "labelHtml": "Column 1"
+        },
+        {
+          "labelHtml": "Column 2"
+        }
+      ],
+      "rows": [
+        {
+          "id": "row-1",
+          "labelHtml": "<div>The lengths of&#xA0;&#x200B;<span class=\"katex\" data-latex=\"\\overline{AX}\"><span class=\"katex-mathml\"><math><semantics><mrow><mover accent=\"true\"><mrow><mi>A</mi><mi>X</mi></mrow><mo stretchy=\"true\">&#x203E;</mo></mover></mrow><annotation encoding=\"application/x-tex\">\\overline{AX}</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.8833300000000001em;\"></span><span class=\"strut bottom\" style=\"height:0.8833300000000001em;vertical-align:0em;\"></span><span class=\"base textstyle uncramped\"><span class=\"mord overline\"><span class=\"vlist\"><span style=\"top:0em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span><span class=\"mord textstyle cramped\"><span class=\"mord mathit\">A</span><span class=\"mord mathit\" style=\"margin-right:0.07847em;\">X</span></span></span><span style=\"top:-0.80333em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span><span class=\"reset-textstyle textstyle uncramped overline-line\"></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span> and&#xA0;&#x200B;<span class=\"katex\" data-latex=\"\\overline{XD}\"><span class=\"katex-mathml\"><math><semantics><mrow><mover accent=\"true\"><mrow><mi>X</mi><mi>D</mi></mrow><mo stretchy=\"true\">&#x203E;</mo></mover></mrow><annotation encoding=\"application/x-tex\">\\overline{XD}</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.8833300000000001em;\"></span><span class=\"strut bottom\" style=\"height:0.8833300000000001em;vertical-align:0em;\"></span><span class=\"base textstyle uncramped\"><span class=\"mord overline\"><span class=\"vlist\"><span style=\"top:0em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span><span class=\"mord textstyle cramped\"><span class=\"mord mathit\" style=\"margin-right:0.07847em;\">X</span><span class=\"mord mathit\" style=\"margin-right:0.02778em;\">D</span></span></span><span style=\"top:-0.80333em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span><span class=\"reset-textstyle textstyle uncramped overline-line\"></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x200B; satisfy the equation&#xA0;&#x200B;<span class=\"katex\" data-latex=\"2AX=3XD\"><span class=\"katex-mathml\"><math><semantics><mrow><mn>2</mn><mi>A</mi><mi>X</mi><mo>=</mo><mn>3</mn><mi>X</mi><mi>D</mi></mrow><annotation encoding=\"application/x-tex\">2AX=3XD</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.68333em;\"></span><span class=\"strut bottom\" style=\"height:0.68333em;vertical-align:0em;\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathrm\">2</span><span class=\"mord mathit\">A</span><span class=\"mord mathit\" style=\"margin-right:0.07847em;\">X</span><span class=\"mrel\">=</span><span class=\"mord mathrm\">3</span><span class=\"mord mathit\" style=\"margin-right:0.07847em;\">X</span><span class=\"mord mathit\" style=\"margin-right:0.02778em;\">D</span></span></span></span>&#x200B;.</div>"
+        },
+        {
+          "id": "row-2",
+          "labelHtml": "<div><div>The lengths&#xA0;&#x200B;<span class=\"katex\" data-latex=\"\\overline{AX}\"><span class=\"katex-mathml\"><math><semantics><mrow><mover accent=\"true\"><mrow><mi>A</mi><mi>X</mi></mrow><mo stretchy=\"true\">&#x203E;</mo></mover></mrow><annotation encoding=\"application/x-tex\">\\overline{AX}</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.8833300000000001em;\"></span><span class=\"strut bottom\" style=\"height:0.8833300000000001em;vertical-align:0em;\"></span><span class=\"base textstyle uncramped\"><span class=\"mord overline\"><span class=\"vlist\"><span style=\"top:0em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span><span class=\"mord textstyle cramped\"><span class=\"mord mathit\">A</span><span class=\"mord mathit\" style=\"margin-right:0.07847em;\">X</span></span></span><span style=\"top:-0.80333em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span><span class=\"reset-textstyle textstyle uncramped overline-line\"></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x200B;,&#xA0;&#x200B;<span class=\"katex\" data-latex=\"\\overline{BX}\"><span class=\"katex-mathml\"><math><semantics><mrow><mover accent=\"true\"><mrow><mi>B</mi><mi>X</mi></mrow><mo stretchy=\"true\">&#x203E;</mo></mover></mrow><annotation encoding=\"application/x-tex\">\\overline{BX}</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.8833300000000001em;\"></span><span class=\"strut bottom\" style=\"height:0.8833300000000001em;vertical-align:0em;\"></span><span class=\"base textstyle uncramped\"><span class=\"mord overline\"><span class=\"vlist\"><span style=\"top:0em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span><span class=\"mord textstyle cramped\"><span class=\"mord mathit\" style=\"margin-right:0.05017em;\">B</span><span class=\"mord mathit\" style=\"margin-right:0.07847em;\">X</span></span></span><span style=\"top:-0.80333em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span><span class=\"reset-textstyle textstyle uncramped overline-line\"></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x200B;,&#xA0;&#x200B;<span class=\"katex\" data-latex=\"\\overline{CX}\"><span class=\"katex-mathml\"><math><semantics><mrow><mover accent=\"true\"><mrow><mi>C</mi><mi>X</mi></mrow><mo stretchy=\"true\">&#x203E;</mo></mover></mrow><annotation encoding=\"application/x-tex\">\\overline{CX}</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.8833300000000001em;\"></span><span class=\"strut bottom\" style=\"height:0.8833300000000001em;vertical-align:0em;\"></span><span class=\"base textstyle uncramped\"><span class=\"mord overline\"><span class=\"vlist\"><span style=\"top:0em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span><span class=\"mord textstyle cramped\"><span class=\"mord mathit\" style=\"margin-right:0.07153em;\">C</span><span class=\"mord mathit\" style=\"margin-right:0.07847em;\">X</span></span></span><span style=\"top:-0.80333em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span><span class=\"reset-textstyle textstyle uncramped overline-line\"></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x200B;, and&#xA0;&#x200B;<span class=\"katex\" data-latex=\"\\overline{DX}\"><span class=\"katex-mathml\"><math><semantics><mrow><mover accent=\"true\"><mrow><mi>D</mi><mi>X</mi></mrow><mo stretchy=\"true\">&#x203E;</mo></mover></mrow><annotation encoding=\"application/x-tex\">\\overline{DX}</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.8833300000000001em;\"></span><span class=\"strut bottom\" style=\"height:0.8833300000000001em;vertical-align:0em;\"></span><span class=\"base textstyle uncramped\"><span class=\"mord overline\"><span class=\"vlist\"><span style=\"top:0em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span><span class=\"mord textstyle cramped\"><span class=\"mord mathit\" style=\"margin-right:0.02778em;\">D</span><span class=\"mord mathit\" style=\"margin-right:0.07847em;\">X</span></span></span><span style=\"top:-0.80333em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span><span class=\"reset-textstyle textstyle uncramped overline-line\"></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x200B; satisfy the equation&#xA0;</div>&#x200B;<span class=\"katex\" data-latex=\"\\frac{AX}{BX}=\\frac{DX}{CX}\"><span class=\"katex-mathml\"><math><semantics><mrow><mfrac><mrow><mi>A</mi><mi>X</mi></mrow><mrow><mi>B</mi><mi>X</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>D</mi><mi>X</mi></mrow><mrow><mi>C</mi><mi>X</mi></mrow></mfrac></mrow><annotation encoding=\"application/x-tex\">\\frac{AX}{BX}=\\frac{DX}{CX}</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.872331em;\"></span><span class=\"strut bottom\" style=\"height:1.217331em;vertical-align:-0.345em;\"></span><span class=\"base textstyle uncramped\"><span class=\"mord reset-textstyle textstyle uncramped\"><span class=\"mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter\"></span><span class=\"mfrac\"><span class=\"vlist\"><span style=\"top:0.345em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em;\">&#x200B;</span></span><span class=\"reset-textstyle scriptstyle cramped mtight\"><span class=\"mord scriptstyle cramped mtight\"><span class=\"mord mathit mtight\" style=\"margin-right:0.05017em;\">B</span><span class=\"mord mathit mtight\" style=\"margin-right:0.07847em;\">X</span></span></span></span><span style=\"top:-0.22999999999999998em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em;\">&#x200B;</span></span><span class=\"reset-textstyle textstyle uncramped frac-line\"></span></span><span style=\"top:-0.394em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em;\">&#x200B;</span></span><span class=\"reset-textstyle scriptstyle uncramped mtight\"><span class=\"mord scriptstyle uncramped mtight\"><span class=\"mord mathit mtight\">A</span><span class=\"mord mathit mtight\" style=\"margin-right:0.07847em;\">X</span></span></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em;\">&#x200B;</span></span>&#x200B;</span></span></span><span class=\"mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter\"></span></span><span class=\"mrel\">=</span><span class=\"mord reset-textstyle textstyle uncramped\"><span class=\"mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter\"></span><span class=\"mfrac\"><span class=\"vlist\"><span style=\"top:0.345em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em;\">&#x200B;</span></span><span class=\"reset-textstyle scriptstyle cramped mtight\"><span class=\"mord scriptstyle cramped mtight\"><span class=\"mord mathit mtight\" style=\"margin-right:0.07153em;\">C</span><span class=\"mord mathit mtight\" style=\"margin-right:0.07847em;\">X</span></span></span></span><span style=\"top:-0.22999999999999998em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em;\">&#x200B;</span></span><span class=\"reset-textstyle textstyle uncramped frac-line\"></span></span><span style=\"top:-0.394em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em;\">&#x200B;</span></span><span class=\"reset-textstyle scriptstyle uncramped mtight\"><span class=\"mord scriptstyle uncramped mtight\"><span class=\"mord mathit mtight\" style=\"margin-right:0.02778em;\">D</span><span class=\"mord mathit mtight\" style=\"margin-right:0.07847em;\">X</span></span></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:0em;\">&#x200B;</span></span>&#x200B;</span></span></span><span class=\"mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter\"></span></span></span></span></span>&#x200B;.</div>"
+        },
+        {
+          "id": "row-3",
+          "labelHtml": "<div>Lines&#xA0;&#x200B;<span class=\"katex\" data-latex=\"\\overline{AB}\"><span class=\"katex-mathml\"><math><semantics><mrow><mover accent=\"true\"><mrow><mi>A</mi><mi>B</mi></mrow><mo stretchy=\"true\">&#x203E;</mo></mover></mrow><annotation encoding=\"application/x-tex\">\\overline{AB}</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.8833300000000001em;\"></span><span class=\"strut bottom\" style=\"height:0.8833300000000001em;vertical-align:0em;\"></span><span class=\"base textstyle uncramped\"><span class=\"mord overline\"><span class=\"vlist\"><span style=\"top:0em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span><span class=\"mord textstyle cramped\"><span class=\"mord mathit\">A</span><span class=\"mord mathit\" style=\"margin-right:0.05017em;\">B</span></span></span><span style=\"top:-0.80333em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span><span class=\"reset-textstyle textstyle uncramped overline-line\"></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x200B; and&#xA0;&#x200B;<span class=\"katex\" data-latex=\"\\overline{CD}\"><span class=\"katex-mathml\"><math><semantics><mrow><mover accent=\"true\"><mrow><mi>C</mi><mi>D</mi></mrow><mo stretchy=\"true\">&#x203E;</mo></mover></mrow><annotation encoding=\"application/x-tex\">\\overline{CD}</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.8833300000000001em;\"></span><span class=\"strut bottom\" style=\"height:0.8833300000000001em;vertical-align:0em;\"></span><span class=\"base textstyle uncramped\"><span class=\"mord overline\"><span class=\"vlist\"><span style=\"top:0em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span><span class=\"mord textstyle cramped\"><span class=\"mord mathit\" style=\"margin-right:0.07153em;\">C</span><span class=\"mord mathit\" style=\"margin-right:0.02778em;\">D</span></span></span><span style=\"top:-0.80333em;\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span><span class=\"reset-textstyle textstyle uncramped overline-line\"></span></span><span class=\"baseline-fix\"><span class=\"fontsize-ensurer reset-size5 size5\"><span style=\"font-size:1em;\">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x200B; are parallel.</div>"
+        },
+        {
+          "id": "row-4",
+          "labelHtml": "<div>Angle&#xA0;&#x200B;<span class=\"katex\" data-latex=\"\\angle XAB\"><span class=\"katex-mathml\"><math><semantics><mrow><mi mathvariant=\"normal\">&#x2220;</mi><mi>X</mi><mi>A</mi><mi>B</mi></mrow><annotation encoding=\"application/x-tex\">\\angle XAB</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.69224em;\"></span><span class=\"strut bottom\" style=\"height:0.69224em;vertical-align:0em;\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathrm\">&#x2220;</span><span class=\"mord mathit\" style=\"margin-right:0.07847em;\">X</span><span class=\"mord mathit\">A</span><span class=\"mord mathit\" style=\"margin-right:0.05017em;\">B</span></span></span></span>&#x200B; is congruent to angle&#xA0;&#x200B;<span class=\"katex\" data-latex=\"\\angle XCD\"><span class=\"katex-mathml\"><math><semantics><mrow><mi mathvariant=\"normal\">&#x2220;</mi><mi>X</mi><mi>C</mi><mi>D</mi></mrow><annotation encoding=\"application/x-tex\">\\angle XCD</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"strut\" style=\"height:0.69224em;\"></span><span class=\"strut bottom\" style=\"height:0.69224em;vertical-align:0em;\"></span><span class=\"base textstyle uncramped\"><span class=\"mord mathrm\">&#x2220;</span><span class=\"mord mathit\" style=\"margin-right:0.07847em;\">X</span><span class=\"mord mathit\" style=\"margin-right:0.07153em;\">C</span><span class=\"mord mathit\" style=\"margin-right:0.02778em;\">D</span></span></span></span>&#x200B;.</div>"
+        }
+      ],
+      "config": {
+        "inputType": "radio"
+      }
+    },
+    {
+      "id": "3",
+      "element": "corespring-number-line",
+      "correctResponse": [
+        {
+          "type": "point",
+          "pointType": "full",
+          "domainPosition": 1
+        },
+        {
+          "type": "line",
+          "leftPoint": "full",
+          "rightPoint": "empty",
+          "domainPosition": 1,
+          "size": 2
+        }
+      ],
+      "feedback": {
+        "correctFeedbackType": "default",
+        "partialFeedbackType": "default",
+        "incorrectFeedbackType": "custom",
+        "incorrectFeedback": "<h1>incorrect</h1>"
+      },
+      "allowPartialScoring": true,
+      "partialScoring": [
+        {
+          "numberOfCorrect": 1,
+          "scorePercentage": 35
+        }
+      ],
+      "model": {
+        "config": {
+          "domain": [
+            0,
+            5
+          ],
+          "initialElements": [
+            {
+              "type": "point",
+              "pointType": "empty",
+              "domainPosition": -1
+            }
+          ],
+          "maxNumberOfPoints": 20,
+          "tickFrequency": 6,
+          "showMinorTicks": true,
+          "snapPerTick": 1,
+          "tickLabelOverrides": [],
+          "initialType": "PF",
+          "exhibitOnly": false,
+          "availableTypes": {
+            "PF": true,
+            "PE": true,
+            "LFF": true,
+            "LEF": true,
+            "LFE": true,
+            "LEE": true,
+            "RFN": true,
+            "RFP": true,
+            "REN": true,
+            "REP": true
+          }
+        }
+      }
+    },
+    {
+      "id": "4",
+      "element": "corespring-placement-ordering",
+      "correctResponse": [
+        "c1",
+        "c4",
+        "c3",
+        "c2"
+      ],
+      "translations": {
+        "default_locale": "en-US",
+        "en-US": {
+          "PROMPT": "Arrange the fruits alphabetically",
+          "LABEL_BLUEBERRY": "Blueberry",
+          "LABEL_LEMON": "Lemon",
+          "LABEL_MELON": "Melon",
+          "LABEL_PEAR": "Pear"
+        },
+        "es-ES": {
+          "PROMPT": "Organizar los frutos alfabético",
+          "LABEL_BLUEBERRY": "Arándano",
+          "LABEL_LEMON": "Limón",
+          "LABEL_MELON": "Melón",
+          "LABEL_PEAR": "Pera"
+        }
+      },
+      "model": {
+        "prompt": "$PROMPT",
+        "choices": [
+          {
+            "id": "c2",
+            "label": "$LABEL_LEMON"
+          },
+          {
+            "id": "c3",
+            "label": "$LABEL_MELON"
+          },
+          {
+            "id": "c1",
+            "label": "$LABEL_BLUEBERRY"
+          },
+          {
+            "id": "c4",
+            "label": "$LABEL_PEAR"
+          }
+        ]
+      }
+    }
+  ]
+}
